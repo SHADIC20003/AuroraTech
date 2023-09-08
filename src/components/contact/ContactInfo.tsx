@@ -15,6 +15,7 @@ export default function ContactInfo({ img, text }: ContactInfoProps) {
                 href={`${
                     text.includes('gmail.com') ? 'mailto:' : 'tel:'
                 }${text}`}
+                target={`${text.includes('gmail.com') && '_blank'}`}
                 className='text-contact-text 2xl:text-[24px] lg:text-xl md:text-base text-[13px]'
             >
                 {text}
