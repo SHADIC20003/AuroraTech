@@ -11,9 +11,14 @@ export default function ContactInfo({ img, text }: ContactInfoProps) {
                 alt='Phone'
                 className='xl:w-auto w-[13px] xl:h-auto h-[13px]'
             />
-            <p className='text-contact-text 2xl:text-[24px] lg:text-xl md:text-base text-[13px]'>
+            <a
+                href={`${
+                    text.includes('gmail.com') ? 'mailto:' : 'tel:'
+                }${text}`}
+                className='text-contact-text 2xl:text-[24px] lg:text-xl md:text-base text-[13px]'
+            >
                 {text}
-            </p>
+            </a>
         </div>
     )
 }
