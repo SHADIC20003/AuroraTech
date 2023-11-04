@@ -37,7 +37,7 @@ export default function Contact() {
                     <ContactInfo img='/phone.svg' text='+20 1069965752' />
                     <ContactInfo
                         img='contact-mail.svg'
-                        text='aurora.software.tech@gmail.com'
+                        text='info@auroratech.me'
                     />
                 </div>
             </div>
