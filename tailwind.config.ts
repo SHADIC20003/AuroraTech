@@ -1,12 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+    content: [
+        './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
     theme: {
         extend: {
-            fontFamily: {
-                merriWeather: ['Merriweather', 'serif'],
-            },
-
             colors: {
                 primary: '#EBECEE',
                 nav: 'rgba(0, 51, 36, 0.79)',
@@ -30,3 +31,4 @@ export default {
     },
     plugins: [],
 }
+export default config

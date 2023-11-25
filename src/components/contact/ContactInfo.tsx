@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 type ContactInfoProps = {
     img: string
     text: string
@@ -6,10 +8,12 @@ type ContactInfoProps = {
 export default function ContactInfo({ img, text }: ContactInfoProps) {
     return (
         <div className='flex items-center gap-2'>
-            <img
+            <Image
                 src={img}
                 alt='Phone'
                 className='xl:w-auto w-[13px] xl:h-auto h-[13px]'
+                width={24}
+                height={24}
             />
             <a
                 href={`${

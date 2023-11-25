@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import WorkDescription from './WorkDescription'
+import workGroup from '../../../public/work-group-2.png'
 
 export default function Work() {
     return (
@@ -25,8 +27,8 @@ export default function Work() {
                 </div>
             </div>
             <div>
-                <img
-                    src='/work-group-2.png'
+                <Image
+                    src={workGroup}
                     alt='Group Work'
                     className='translate-x-3 '
                 />
@@ -39,27 +41,3 @@ export default function Work() {
         </section>
     )
 }
-
-// <img
-//                 src='/1.png'
-//                 alt=''
-//                 className='-translate-y-[17.5rem] translate-x-20'
-//             />
-//             <div className='-translate-y-20'>
-//                 <img
-//                     src='/image1.png'
-//                     alt=''
-//                     className='translate-x-28 translate-y-40'
-//                 />
-//                 <img src='/image2.png' alt='' className='' />
-//                 <img
-//                     src='/image4.png'
-//                     alt=''
-//                     className='-translate-x-28 -translate-y-40'
-//                 />
-//             </div>
-//             <img
-//                 src='/2.png'
-//                 alt=''
-//                 className='translate-y-12 translate-x-7'
-//             />

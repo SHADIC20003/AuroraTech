@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import servicesTools from '../../../public/service-tools.png'
+
 export default function Intro() {
     return (
         <div className='flex justify-between'>
@@ -9,8 +12,8 @@ export default function Intro() {
                     What we do?
                 </h1>
             </div>
-            <img
-                src='/service-tools.png'
+            <Image
+                src={servicesTools}
                 alt='Service Tools'
                 className='xl:translate-y-14 xl:w-auto xl:h-auto w-1/2 h-1/2'
             />

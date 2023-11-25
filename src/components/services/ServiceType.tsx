@@ -1,7 +1,9 @@
+import Image, { StaticImageData } from 'next/image'
+
 type ServiceTypeProps = {
     title: string
     description: string
-    image: string
+    image: StaticImageData
 }
 
 export default function ServiceType({
@@ -11,7 +13,7 @@ export default function ServiceType({
 }: ServiceTypeProps) {
     return (
         <div className='flex flex-col items-center gap-5'>
-            <img
+            <Image
                 src={image}
                 alt={title}
                 className='md:w-auto md:h-auto h-10 w-10'
