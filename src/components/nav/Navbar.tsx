@@ -1,12 +1,10 @@
-import Image from 'next/image'
 import NavItem from './NavItem'
-import logoMob from '../../../public/logo-mob.png'
 
 export default function Navbar() {
     return (
         <nav>
-            <Image
-                src={logoMob}
+            <img
+                src='/logo-mob.png'
                 alt='logo'
                 className='z-20 md:p-5 p-2 fixed top-0 left-0 lg:hidden'
             />
