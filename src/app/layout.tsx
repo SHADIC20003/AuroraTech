@@ -1,11 +1,26 @@
 import type { Metadata } from 'next'
-import { Merriweather } from 'next/font/google'
+import { Inter, Roboto_Slab, Open_Sans } from 'next/font/google'
+import { Toaster } from 'sonner'
 import './globals.css'
+import { cn } from '@/lib/utils'
+import { Navbar } from '@/components/nav/nav-bar'
+import { Footer } from '@/components/sections/footer'
 
-// const merriWeather = Merriweather({
-//     subsets: ['latin'],
-//     weight: ['300', '400', '700', '900'],
-// })
+const inter = Inter({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-inter',
+})
+const robotoSlab = Roboto_Slab({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-roboto-slab',
+})
+const openSans = Open_Sans({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-open-sans',
+})
 
 export const metadata: Metadata = {
     title: 'Aurora Tech',
@@ -14,7 +29,7 @@ export const metadata: Metadata = {
     icons: [
         {
             rel: 'icon',
-            url: '/favicon.png',
+            url: '/others/favicon.png',
         },
     ],
     openGraph: {
@@ -26,7 +41,7 @@ export const metadata: Metadata = {
             'Aurora Tech is a software development company that specializes in web development and mobile development.',
         images: [
             {
-                url: '/favicon.png',
+                url: '/others/favicon.png',
                 width: 512,
                 height: 512,
                 alt: 'Aurora Tech Logo',
@@ -37,7 +52,7 @@ export const metadata: Metadata = {
         site: 'auroratech.me',
         images: [
             {
-                url: '/favicon.png',
+                url: '/others/favicon.png',
                 alt: 'Aurora Tech Logo',
             },
         ],
@@ -67,15 +82,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-}: {
+}: Readonly<{
     children: React.ReactNode
-}) {
+}>) {
     return (
-        <html lang='en' className='scroll-smooth'>
+        <html lang='en'>
             <body
-            // className={merriWeather.className}
+                className={cn(
+                    `${inter.variable} ${robotoSlab.variable} ${openSans.variable}`,
+                    'bg-blue font-sans',
+                )}
             >
+                <Navbar />
                 {children}
+                <Footer />
+                <Toaster />
             </body>
         </html>
     )
