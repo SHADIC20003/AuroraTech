@@ -1,7 +1,6 @@
 import React from 'react'
 import { Header } from '../ui/header'
 import { ProjectCard } from '../ui/project-card'
-import { Others } from '../svgs'
 import { PROJECTS } from '@/lib/constants'
 
 export const ProjectsSection = () => {

@@ -9,7 +9,7 @@ type HeaderProps = {
 
 export const Header = ({ text1, text2, className }: HeaderProps) => {
     return (
-        <span
+        <h2
             className={cn(
                 'font-slab text-4xl font-bold text-White sm:text-[2.5rem]',
                 className,
@@ -17,6 +17,6 @@ export const Header = ({ text1, text2, className }: HeaderProps) => {
         >
             <span>{text1}</span>
             <span className='text-green-300'> {text2}</span>
-        </span>
+        </h2>
     )
 }

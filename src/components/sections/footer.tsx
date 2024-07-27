@@ -48,7 +48,9 @@ export const Footer = () => {
                                 our creativity with your project to deliver you
                                 exceptional results. Ready to unlock the full
                                 potential of your digital presence? {`We're`}{' '}
-                                here to help.
+                                here to help. <br />
+                                Headquartered in Egypt, providing software
+                                solutions globally
                             </p>
                         </div>
                         <div className='grid gap-8 sm:grid-cols-2 sm:gap-16'>

@@ -22,10 +22,12 @@ const openSans = Open_Sans({
     variable: '--font-open-sans',
 })
 
+const description =
+    'Aurora Tech is your software development partner committed to creating exceptional solutions through open communication, flexibility, and technological expertise. We collaborate closely with clients to understand their vision and deliver innovative products using the latest technologies.'
+
 export const metadata: Metadata = {
     title: 'Aurora Tech',
-    description:
-        'Aurora Tech is a software development company that specializes in web development and mobile development.',
+    description,
     icons: [
         {
             rel: 'icon',
@@ -37,8 +39,7 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://auroratech.me',
         title: 'Aurora Tech',
-        description:
-            'Aurora Tech is a software development company that specializes in web development and mobile development.',
+        description,
         images: [
             {
                 url: '/others/favicon.png',
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
         ],
     },
     twitter: {
-        site: 'auroratech.me',
+        site: 'https://auroratech.me',
         images: [
             {
                 url: '/others/favicon.png',
@@ -60,18 +61,17 @@ export const metadata: Metadata = {
     },
     keywords: [
         'Aurora Tech',
-        'Aurora',
-        'Tech',
-        'Software',
-        'Development',
-        'Web',
-        'Mobile',
-        'Web Development',
-        'Mobile Development',
-        'Software Development',
-        'Software Development Company',
-        'Web Development Company',
+        'Aurora Tech Egypt',
+        'Mobile App Development',
         'Mobile Development Company',
+        'Web Development Egypt',
+        'Web Development Company',
+        'Website Design',
+        'UI/UX Design',
+        'Software Development',
+        'E-commerce Development',
+        'Landing Page Development',
+        'Custom Software',
     ],
     authors: [
         {
