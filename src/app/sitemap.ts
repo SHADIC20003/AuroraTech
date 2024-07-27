@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: `${BASE_URL}/about`,
+            url: `${BASE_URL}/about-us`,
             lastModified: new Date(),
             priority: 0.9,
         },
