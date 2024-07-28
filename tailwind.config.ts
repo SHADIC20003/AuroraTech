@@ -47,6 +47,7 @@ const config: Config = {
 
             boxShadow: {
                 card: '6px 6px 15px 0px #000A15',
+                'blog-card': '1px 1px 15px 0px #35997626',
             },
             animation: {
                 scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
@@ -74,6 +75,9 @@ const config: Config = {
             },
         },
     },
-    plugins: [require('tailwindcss-animate')],
+    plugins: [
+        require('tailwindcss-animate'),
+        require('@tailwindcss/typography'),
+    ],
 }
 export default config

@@ -5,6 +5,7 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import { Navbar } from '@/components/nav/nav-bar'
 import { Footer } from '@/components/sections/footer'
+import NextTopLoader from 'nextjs-toploader'
 
 const inter = Inter({
     subsets: ['latin'],
@@ -93,6 +94,7 @@ export default function RootLayout({
                     'bg-blue font-sans',
                 )}
             >
+                <NextTopLoader zIndex={99999} />
                 <Navbar />
                 {children}
                 <Footer />

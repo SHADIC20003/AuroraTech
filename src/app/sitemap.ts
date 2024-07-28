@@ -31,6 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: `${BASE_URL}/blogs`,
+            lastModified: new Date(),
+            priority: 0.9,
+        },
+        {
             url: `${BASE_WITH_WWW}/`,
             lastModified: new Date(),
             priority: 1,
@@ -54,6 +59,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${BASE_WITH_WWW}/services`,
             lastModified: new Date(),
             priority: 1,
+        },
+        {
+            url: `${BASE_WITH_WWW}/blogs`,
+            lastModified: new Date(),
+            priority: 0.9,
         },
     ]
 }

@@ -13,7 +13,6 @@ export const Navbar = () => {
     const pinned = useHeadroom({ fixedAt: 0 })
 
     return (
-        // <nav className='border-b border-gray-muted bg-blue py-3 font-inter'>
         <nav
             className='sticky top-0 z-[9999] border-b border-gray-muted bg-blue py-3 font-inter transition-transform duration-200'
             style={{

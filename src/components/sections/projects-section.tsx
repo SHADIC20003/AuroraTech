@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '../ui/header'
-import { ProjectCard } from '../ui/project-card'
+import { ProjectCard } from '../cards/project-card'
 import { PROJECTS } from '@/lib/constants'
 
 export const ProjectsSection = () => {

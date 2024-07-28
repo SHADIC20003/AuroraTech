@@ -7,6 +7,7 @@ export const NAV_ITEMS = [
     { href: '/services', text: 'Services' },
     { href: '/our-work', text: 'Our Work' },
     { href: '/about-us', text: 'About Us' },
+    { href: '/blogs', text: 'Blogs' },
 ]
 
 export const FOOTER_LINKS = [
