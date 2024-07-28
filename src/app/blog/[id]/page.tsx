@@ -32,11 +32,12 @@ export async function generateMetadata(
 
     return {
         title: blog?.title,
-        description: blog?.description ?? '',
+        description: blog?.description,
+        keywords: blog?.keywords,
         openGraph: {
             ...openGraph,
             title: blog?.title,
-            description: blog?.description ?? '',
+            description: blog?.description,
             url: `https://www.auroratech.me/blog/${id}`,
             images: [
                 {
@@ -47,7 +48,7 @@ export async function generateMetadata(
         },
         twitter: {
             title: blog?.title,
-            description: blog?.description ?? '',
+            description: blog?.description,
             site: 'https://www.auroratech.me/blog',
             images: [
                 {
