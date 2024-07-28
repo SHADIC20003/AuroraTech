@@ -51,6 +51,8 @@ export const metadata: Metadata = {
         ],
     },
     twitter: {
+        title: 'Aurora Tech',
+        description,
         site: 'https://auroratech.me',
         images: [
             {

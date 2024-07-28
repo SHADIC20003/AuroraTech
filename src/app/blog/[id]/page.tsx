@@ -38,6 +38,23 @@ export async function generateMetadata(
             title: blog?.title,
             description: blog?.description ?? '',
             url: `https://www.auroratech.me/blog/${id}`,
+            images: [
+                {
+                    url: blog?.image ?? '/others/favicon.png',
+                    alt: blog?.title,
+                },
+            ],
+        },
+        twitter: {
+            title: blog?.title,
+            description: blog?.description ?? '',
+            site: 'https://www.auroratech.me/blog',
+            images: [
+                {
+                    url: blog?.image ?? '/others/favicon.png',
+                    alt: blog?.title,
+                },
+            ],
         },
     }
 }

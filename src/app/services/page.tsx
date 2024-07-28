@@ -23,6 +23,8 @@ export const metadata: Metadata = {
         ],
     },
     twitter: {
+        title: 'Services | Aurora Tech',
+        description,
         site: 'https://auroratech.me/services',
         images: [
             {
