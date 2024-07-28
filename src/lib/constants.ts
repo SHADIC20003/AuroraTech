@@ -32,6 +32,10 @@ export const FOOTER_LINKS = [
         text: 'Contact',
     },
     {
+        href: '/blogs',
+        text: 'Blogs',
+    },
+    {
         href: 'https://forms.gle/auo2Fq7QRErQFGbt9',
         text: 'Apply for Work',
     },
