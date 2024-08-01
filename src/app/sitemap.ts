@@ -1,7 +1,7 @@
 import { prisma } from '@/server/db'
 import { MetadataRoute } from 'next'
 
-export const revalidate = 60 * 60 * 24 // 24 hours
+export const revalidate = 86400
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const BASE_URL = 'https://auroratech.me'
