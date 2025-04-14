@@ -50,6 +50,24 @@ import DhebhHospital from '../../public/work/dhebh/hospital.png'
 import DhebhReviews from '../../public/work/dhebh/reviews.png'
 import DhebhMission from '../../public/work/dhebh/mission.png'
 
+// Work Uplo
+import UploAbout from '../../public/work/uplo/about.png'
+import UploCart from '../../public/work/uplo/cart.png'
+import UploInfo1 from '../../public/work/uplo/info-1.png'
+import UploItem from '../../public/work/uplo/item.png'
+
+// Work Quellor
+import QuellorHome from '../../public/work/quellor/home.jpeg'
+import QuellorLogin from '../../public/work/quellor/login.jpeg'
+import QuellorSearch from '../../public/work/quellor/search.jpeg'
+import QuellorBlog from '../../public/work/quellor/blog.jpeg'
+
+// Work Learnify
+import LearnifyLogin from '../../public/work/learnify/login.png'
+import LearnifyChat from '../../public/work/learnify/chat.png'
+import LearnifyDashboard from '../../public/work/learnify/dashboard.png'
+import LearnifyTasks from '../../public/work/learnify/tasks.png'
+
 export const Services = {
     Maintenance,
     MobDev,
@@ -169,5 +187,23 @@ export const Work = {
         Hospital: DhebhHospital,
         Reviews: DhebhReviews,
         Mission: DhebhMission,
+    },
+    Uplo: {
+        About: UploAbout,
+        Cart: UploCart,
+        Info1: UploInfo1,
+        Item: UploItem,
+    },
+    Quellor: {
+        Home: QuellorHome,
+        Login: QuellorLogin,
+        Search: QuellorSearch,
+        Blog: QuellorBlog,
+    },
+    Learnify: {
+        Login: LearnifyLogin,
+        Chat: LearnifyChat,
+        Dashboard: LearnifyDashboard,
+        Tasks: LearnifyTasks,
     },
 }

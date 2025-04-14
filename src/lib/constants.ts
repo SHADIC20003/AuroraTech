@@ -107,6 +107,64 @@ export const SERVICES = [
 
 export const PROJECTS = [
     {
+        title: 'Quellor',
+        description:
+            'A modern blogging-based social media platform designed to empower creators. Quellor encourages users to share their thoughts, stories, and news in a longform format, providing an alternative to the dominance of short-form content.',
+        images: [
+            Work.Quellor.Home,
+            Work.Quellor.Login,
+            Work.Quellor.Search,
+            Work.Quellor.Blog,
+        ],
+        tags: [
+            {
+                name: 'Web Design & Development',
+                icon: Others.WebDevTag,
+            },
+        ],
+        websiteUrl: 'https://quellor.net',
+    },
+    {
+        title: 'Uplo',
+        description:
+            'A minimalist e-commerce platform built with aesthetics and functionality in mind. Designed for a brand that prioritizes clean, modern visuals, Uplo delivers a seamless shopping experience while making the brand itself the focal point.',
+        images: [
+            Work.Uplo.About,
+            Work.Uplo.Cart,
+            Work.Uplo.Info1,
+            Work.Uplo.Item,
+        ],
+        tags: [
+            {
+                name: 'Web Design & Development',
+                icon: Others.WebDevTag,
+            },
+            {
+                name: 'E-Commerce',
+                icon: Others.Store,
+            },
+        ],
+        websiteUrl: 'https://uplo-store.com',
+    },
+    {
+        title: 'Learnify.ai',
+        description:
+            'A next-generation LMS designed for universities, enhanced with AI powered tools to assist both students and professors.',
+        images: [
+            Work.Learnify.Login,
+            Work.Learnify.Chat,
+            Work.Learnify.Dashboard,
+            Work.Learnify.Tasks,
+        ],
+        tags: [
+            {
+                name: 'Web Design & Development',
+                icon: Others.WebDevTag,
+            },
+        ],
+        websiteUrl: 'https://learnify-ai-one.vercel.app',
+    },
+    {
         title: 'Latin',
         description:
             'Latin is a beauty and fashion brand specializing in lip gloss, and other makeup and beauty products to match their fantastic and stylish brand we decided to make this elegant website for them.',
@@ -144,6 +202,6 @@ export const PROJECTS = [
                 icon: Others.Medical,
             },
         ],
-        websiteUrl: 'https://www.dhebh.net/',
+        websiteUrl: 'https://www.dhebh.vercel.app/',
     },
 ]
