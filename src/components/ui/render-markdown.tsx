@@ -43,7 +43,7 @@ export const RenderMarkdown = ({ data }: RenderMarkdownProps) => {
                     },
                 }}
             >
-                {`# ${data.title}\n\n${data.content}` ?? ''}
+                {`# ${data.title ?? ''}\n\n${data.content ?? ''}`}
             </ReactMarkdown>
         </div>
     )
