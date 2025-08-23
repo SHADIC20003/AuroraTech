@@ -74,7 +74,7 @@ export const FOOTER_CONTACT = [
     {
         icon: Others.Instagram,
         text: 'Instagram',
-        href: 'https://www.instagram.com/aurora.software.tech/',
+        href: 'https://www.instagram.com/auroratech.me/',
     },
 ]
 
