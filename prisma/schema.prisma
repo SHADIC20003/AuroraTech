@@ -3,8 +3,22 @@ generator client {
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DIRECT_URL")
+}
+
+model CaseStudy {
+    id          String   @id @default(cuid())
+    title       String
+    slug        String   @unique
+    client      String
+    challenge   String
+    solution    String
+    results     String
+    coverImage  String
+    featured    Boolean  @default(false)
+    publishedAt DateTime @default(now())
 }
 
 model Blog {

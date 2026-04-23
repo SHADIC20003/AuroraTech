@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "ourWork": "Our Work",
+    "aboutUs": "About Us",
+    "blogs": "Blogs",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch"
+  },
+  "intro": {
+    "headline1": "Engineering the Future of",
+    "headline2": "Digital Experiences",
+    "subtitle": "We bridge the gap between vision and reality with state-of-the-art software solutions. Empowering ambitious businesses to conquer the digital landscape.",
+    "scroll": "Scroll"
+  },
+  "services": {
+    "label": "Our",
+    "title": "Services",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Whether you want to digitize and automate your business or to up scale and increase your reach. We can make it happen using the latest tools and technologies. Our team of experienced web developers will help you create a website that stands out from the crowd and get better search results with SEO optimization and responsive web designs."
+    },
+    "mobDev": {
+      "title": "Mobile Development",
+      "description": "Our Cutting-edge cross platform mobile application will help you build a stronger brand, connect with customers better, provide value to customers, and improve customer engagement, all while being user-friendly, secure and high-performing."
+    },
+    "uiUx": {
+      "title": "UI/UX Design",
+      "description": "Need a prototype for your business? We got you covered, our team of UI/UX designers will help you create a prototype with modern design that will help boost your brand identity. Our Designs are made to be modern, user-friendly and customized to your brand."
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "What comes after the development? Well, of course we would help you maintain your service. In order to make sure that you never run into a problem, our Maintenance and cloud engineers will always be on the lookout to make sure that your website and mobile app are running on tip top conditions."
+    }
+  },
+  "process": {
+    "label": "Our",
+    "title": "Process",
+    "subtitle": "A proven four-step workflow that transforms your ideas into polished, high-performing products.",
+    "step": "Step",
+    "steps": {
+      "strategy": {
+        "title": "Strategy",
+        "description": "We deep-dive into your goals, audience, and competitive landscape to craft a data-driven roadmap tailored to your vision."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Our designers craft pixel-perfect, user-centric interfaces focused on brand identity, accessibility, and high conversion rates."
+      },
+      "development": {
+        "title": "Development",
+        "description": "We build with modern, scalable technologies — clean code, optimised performance, and a future-ready architecture."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "From staging to production, we ensure a flawless deployment with monitoring, analytics, and full post-launch support."
+      }
+    }
+  },
+  "about": {
+    "label": "About Us",
+    "headline": "We are a passionate team of experts who deliver innovative, high-quality software solutions.",
+    "body": "Aurora Tech is your software development partner committed to creating exceptional solutions through open communication, flexibility, and technological expertise. We collaborate closely with clients to understand their vision and deliver innovative products using the latest technologies.",
+    "contactHeadline": "For Any Further Discussion or Questions",
+    "contactLabel": "Send to us on Email",
+    "available": "Available for new projects"
+  },
+  "projects": {
+    "label": "Selected",
+    "title": "Projects",
+    "quickDetails": "Quick Details"
+  },
+  "caseStudy": {
+    "readCaseStudy": "Read Case Study",
+    "challenge": "The Challenge",
+    "solution": "The Solution",
+    "techStack": "Tech Stack",
+    "results": "Results & Impact",
+    "visitWebsite": "Visit Website",
+    "role": "Role",
+    "timeline": "Timeline",
+    "overview": "Project Overview",
+    "gallery": "Gallery",
+    "nextProject": "Next Project"
+  },
+  "technologies": {
+    "title": "Technologies We Use"
+  },
+  "footer": {
+    "contactUs": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "startProject": "Start a Project",
+    "usefulLinks": "Useful Links",
+    "contact": "Contact",
+    "description": "With our cutting-edge technology, we will weave our creativity with your project to deliver you exceptional results. Ready to unlock the full potential of your digital presence? We're here to help. Headquartered in Egypt, providing software solutions globally.",
+    "copyright": "© {year} Aurora Tech. All Rights Reserved."
+  },
+  "blogs": {
+    "title": "Blogs",
+    "noBlogsFound": "No blogs found"
+  },
+  "caseStudies": {
+    "title": "Our Case Studies",
+    "subtitle": "Explore how we engineer digital growth for ambitious brands.",
+    "readFull": "Read Full Case Study"
+  },
+  "inlineCta": {
+    "heading": "Ready to start your digital journey?",
+    "subheading": "Let's build something exceptional together.",
+    "button": "Let's Talk"
+  },
+  "contact": {
+    "letsTalk": "Let's Talk",
+    "responseNote": "Tell us about your project and we'll get back to you within 24 hours.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "body": "Body",
+    "send": "Send",
+    "sending": "Sending...",
+    "sent": "Sent!",
+    "successMessage": "Message sent successfully!",
+    "label": "Contact Us",
+    "intents": {
+      "webDev": "Web Development",
+      "mobileApp": "Mobile App",
+      "uiUx": "UI/UX Design",
+      "maintenance": "Maintenance",
+      "other": "Other"
+    }
+  }
+}

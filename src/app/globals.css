@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+@layer base {
+    html,
+    body {
+        @apply bg-[#F8FAFC] dark:bg-[#000a15];
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-slate-900 dark:text-white;
+    }
+
+    p {
+        @apply text-slate-600 dark:text-slate-400;
+    }
+
+    /* ── Arabic locale: apply Cairo across every font utility class ── */
+    :lang(ar) {
+        font-family: var(--font-cairo), sans-serif;
+    }
+
+    :lang(ar) .font-inter,
+    :lang(ar) .font-slab,
+    :lang(ar) .font-sans {
+        font-family: var(--font-cairo), sans-serif;
+    }
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;

@@ -8,7 +8,7 @@ type UseIntervalProps = {
 
 export const useInterval = ({ fn, delay }: UseIntervalProps) => {
     const [isRunning, setIsRunning] = React.useState(true)
-    let interval = React.useRef<NodeJS.Timeout>()
+    let interval = React.useRef<NodeJS.Timeout | undefined>(undefined)
 
     const start = () => {
         if (interval.current) return

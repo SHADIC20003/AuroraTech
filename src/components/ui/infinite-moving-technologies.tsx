@@ -2,7 +2,26 @@
 
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
+
+const DISPLAY_NAMES: Record<string, string> = {
+    AWS: 'AWS',
+    CSS: 'CSS3',
+    Figma: 'Figma',
+    Flutter: 'Flutter',
+    HTML: 'HTML5',
+    JS: 'JavaScript',
+    JSON: 'JSON',
+    MongoDB: 'MongoDB',
+    Next: 'Next.js',
+    Node: 'Node.js',
+    Python: 'Python',
+    React: 'React',
+    SQL: 'PostgreSQL',
+    Supabase: 'Supabase',
+    Tailwind: 'Tailwind CSS',
+    TS: 'TypeScript',
+}
 
 export const InfiniteMovingTechnologies = ({
     items,
@@ -11,94 +30,59 @@ export const InfiniteMovingTechnologies = ({
     pauseOnHover = true,
     className,
 }: {
-    items: {
-        alt: string
-        icon: any
-    }[]
+    items: { alt: string; icon: any }[]
     direction?: 'left' | 'right'
     speed?: 'fast' | 'normal' | 'slow'
     pauseOnHover?: boolean
     className?: string
 }) => {
-    const containerRef = React.useRef<HTMLDivElement>(null)
-    const scrollerRef = React.useRef<HTMLUListElement>(null)
+    const [isPaused, setIsPaused] = useState(false)
+    const duration =
+        speed === 'fast' ? '20s' : speed === 'normal' ? '60s' : '80s'
+    const animationDirection = direction === 'left' ? 'normal' : 'reverse'
 
-    useEffect(() => {
-        addAnimation()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // Duplicate items so the CSS keyframe can translate -50% seamlessly
+    const doubled = [...items, ...items]
 
-    const [start, setStart] = useState(false)
-    function addAnimation() {
-        if (containerRef.current && scrollerRef.current) {
-            const scrollerContent = Array.from(scrollerRef.current.children)
-
-            scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true)
-                if (scrollerRef.current) {
-                    scrollerRef.current.appendChild(duplicatedItem)
-                }
-            })
-
-            getDirection()
-            getSpeed()
-            setStart(true)
-        }
-    }
-    const getDirection = () => {
-        if (containerRef.current) {
-            if (direction === 'left') {
-                containerRef.current.style.setProperty(
-                    '--animation-direction',
-                    'forwards',
-                )
-            } else {
-                containerRef.current.style.setProperty(
-                    '--animation-direction',
-                    'reverse',
-                )
-            }
-        }
-    }
-    const getSpeed = () => {
-        if (containerRef.current) {
-            if (speed === 'fast') {
-                containerRef.current.style.setProperty(
-                    '--animation-duration',
-                    '20s',
-                )
-            } else if (speed === 'normal') {
-                containerRef.current.style.setProperty(
-                    '--animation-duration',
-                    '60s',
-                )
-            } else {
-                containerRef.current.style.setProperty(
-                    '--animation-duration',
-                    '80s',
-                )
-            }
-        }
-    }
     return (
         <div
-            ref={containerRef}
             className={cn(
-                'scroller relative z-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+                'relative overflow-x-hidden',
+                '[mask-image:linear-gradient(to_right,transparent,white_12%,white_88%,transparent)]',
                 className,
             )}
+            dir="ltr"
+            onMouseEnter={() => pauseOnHover && setIsPaused(true)}
+            onMouseLeave={() => pauseOnHover && setIsPaused(false)}
         >
+            {/* subtle track backdrop — logical inset so it spans full width in both directions */}
+            <div className='absolute inset-0 rounded-full bg-slate-100 dark:bg-white/[0.03]' />
+
             <ul
-                ref={scrollerRef}
-                className={cn(
-                    'flex w-max min-w-full shrink-0 flex-nowrap items-center gap-8 py-4 md:gap-16',
-                    start && 'animate-scroll',
-                    pauseOnHover && 'hover:[animation-play-state:paused]',
-                )}
+                className='relative flex w-max min-w-full shrink-0 flex-nowrap items-center gap-10 pt-10 pb-5 md:gap-20'
+                style={{
+                    animation: `scroll ${duration} ${animationDirection} linear infinite`,
+                    animationPlayState: isPaused ? 'paused' : 'running',
+                }}
             >
-                {items.map((item, idx) => (
-                    <li key={item.alt}>
-                        <Image src={item.icon} alt={item.alt} />
+                {doubled.map((item, idx) => (
+                    <li
+                        key={idx}
+                        className='group/logo relative flex flex-shrink-0 flex-col items-center'
+                    >
+                        {/* Tooltip — centered above icon using start-1/2 logical property */}
+                        <span
+                            className='pointer-events-none absolute -top-8 start-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-slate-200 dark:bg-white/10 px-2 py-1 font-inter text-[11px] font-medium tracking-wide text-slate-900 dark:text-white/80 opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover/logo:opacity-100'
+                            aria-hidden
+                        >
+                            {DISPLAY_NAMES[item.alt] ?? item.alt}
+                        </span>
+
+                        <Image
+                            src={item.icon}
+                            alt={item.alt}
+                            className='grayscale opacity-80 dark:opacity-50 transition-all duration-300 ease-out group-hover/logo:grayscale-0 group-hover/logo:opacity-100 group-hover/logo:scale-110'
+                        />
                     </li>
                 ))}
             </ul>

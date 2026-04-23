@@ -27,7 +27,7 @@ export const FooterLink = ({ href, text, icon }: FooterLinkProps) => {
                         : undefined
                 }
                 className={cn(
-                    'flex items-center gap-2 rounded-md font-inter text-base font-semibold leading-none text-gray-300 outline-none ring-blue ring-offset-green-300 duration-300 hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 max-lg:justify-center sm:text-lg',
+                    'flex items-center gap-2 rounded-md font-inter text-base font-semibold leading-none text-slate-600 dark:text-gray-300 outline-none ring-blue ring-offset-green-300 duration-300 hover:underline focus-visible:ring-2 focus-visible:ring-offset-2 max-lg:justify-center sm:text-lg',
                     text === 'info@auroratech.me' && 'gap-1',
                 )}
             >

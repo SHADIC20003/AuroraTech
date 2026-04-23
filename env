@@ -1,0 +1,12 @@
+DATABASE_URL="postgresql://postgres.wxcdzvfvwxtcamaadfjb:wexBOAf0NwOQUK67@aws-0-eu-central-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1"
+DIRECT_URL="postgresql://postgres.wxcdzvfvwxtcamaadfjb:wexBOAf0NwOQUK67@aws-0-eu-central-1.pooler.supabase.com:5432/postgres"
+
+SUPABASE_SERVICE_ROLE="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4Y2R6dmZ2d3h0Y2FtYWFkZmpiIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyMjExMzU0MCwiZXhwIjoyMDM3Njg5NTQwfQ.LfRcz4slSoTAkEG0bKSBTVhp0LBzs6jAExkOB_rSuSI"
+SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4Y2R6dmZ2d3h0Y2FtYWFkZmpiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIxMTM1NDAsImV4cCI6MjAzNzY4OTU0MH0.byNzkech1L1sG561ugAisJaeOcz5JPH3l91xO0o-Sec"
+SUPABASE_URL="https://wxcdzvfvwxtcamaadfjb.supabase.co"
+
+NEXT_PUBLIC_SUPABASE_STORAGE_URL="https://wxcdzvfvwxtcamaadfjb.supabase.co/storage/v1/object/public"
+
+# Login details
+# EMAIL = "info@auroratech.me"
+# PASSWORD = "7ek,vz27C4Z3~8E"

@@ -8,17 +8,15 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ({ className, type, ...props }, ref) => {
         return (
-            <div className='rounded-md bg-gradient-to-b from-green-300 to-blue p-[0.125rem]'>
-                <input
-                    type={type}
-                    className={cn(
-                        'flex h-10 w-full rounded-md bg-gray-100 px-3 py-2 text-sm font-semibold tracking-[0.00938em] text-gray-500 ring-offset-gray-500 placeholder:text-gray-500/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
-                        className,
-                    )}
-                    ref={ref}
-                    {...props}
-                />
-            </div>
+            <input
+                type={type}
+                className={cn(
+                    'flex h-10 w-full rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 px-3 py-2 text-sm font-semibold tracking-[0.00938em] text-slate-900 dark:text-white backdrop-blur-md placeholder:text-slate-400 dark:placeholder:text-white/40 shadow-sm dark:shadow-none transition-all duration-300 focus-visible:outline-none focus-visible:border-emerald-500 dark:focus-visible:border-[#359976] focus-visible:ring-4 focus-visible:ring-emerald-500/10 dark:focus-visible:ring-0 focus-visible:shadow-[0_0_15px_rgba(53,153,118,0.3)] disabled:cursor-not-allowed disabled:opacity-50',
+                    className,
+                )}
+                ref={ref}
+                {...props}
+            />
         )
     },
 )

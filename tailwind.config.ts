@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+    darkMode: 'class',
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -19,6 +20,7 @@ const config: Config = {
                 inter: ['var(--font-inter)'],
                 slab: ['var(--font-roboto-slab)'],
                 sans: ['var(--font-open-sans)'],
+                cairo: ['var(--font-cairo)', 'sans-serif'],
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -53,8 +55,13 @@ const config: Config = {
                 scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
                 'fade-in': 'fade-in 0.5s ease-in-out',
                 'slide-in': 'slide-in 0.5s ease-out',
+                shimmer: 'shimmer 3s linear infinite',
             },
             keyframes: {
+                shimmer: {
+                    '0%': { backgroundPosition: '0% 50%' },
+                    '100%': { backgroundPosition: '200% 50%' },
+                },
                 scroll: {
                     to: {
                         transform: 'translate(calc(-50% - 0.5rem))',
