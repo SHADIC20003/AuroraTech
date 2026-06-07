@@ -9,27 +9,31 @@ datasource db {
 }
 
 model CaseStudy {
-    id          String   @id @default(cuid())
-    title       String
-    slug        String   @unique
-    client      String
-    challenge   String
-    solution    String
-    results     String
-    coverImage  String
-    featured    Boolean  @default(false)
-    publishedAt DateTime @default(now())
+    id             String   @id @default(cuid())
+    title          String
+    description    String
+    content        String
+    title_ar       String?
+    description_ar String?
+    content_ar     String?
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @default(now())
+
+    @@map("case_studies")
 }
 
 model Blog {
-    id          String   @id @default(cuid())
-    image       String
-    title       String
-    content     String
-    description String
-    keywords    String[]
-    createdAt   DateTime @default(now())
-    updatedAt   DateTime @updatedAt
+    id             String   @id @default(cuid())
+    image          String
+    title          String
+    content        String
+    description    String
+    keywords       String[]
+    title_ar       String?
+    description_ar String?
+    content_ar     String?
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @updatedAt
 
     @@map("blogs")
 }

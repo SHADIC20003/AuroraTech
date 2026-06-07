@@ -73,6 +73,7 @@
   },
   "caseStudy": {
     "readCaseStudy": "Read Case Study",
+    "completed": "Completed",
     "challenge": "The Challenge",
     "solution": "The Solution",
     "techStack": "Tech Stack",
@@ -98,12 +99,16 @@
   },
   "blogs": {
     "title": "Blogs",
-    "noBlogsFound": "No blogs found"
+    "noBlogsFound": "No blogs found",
+    "author": "Author",
+    "shareArticle": "Share this article",
+    "relatedArticles": "Related Articles"
   },
   "caseStudies": {
     "title": "Our Case Studies",
     "subtitle": "Explore how we engineer digital growth for ambitious brands.",
-    "readFull": "Read Full Case Study"
+    "readFull": "Read Full Case Study",
+    "noCaseStudiesFound": "No case studies found."
   },
   "inlineCta": {
     "heading": "Ready to start your digital journey?",

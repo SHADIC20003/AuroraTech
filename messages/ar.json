@@ -73,6 +73,7 @@
   },
   "caseStudy": {
     "readCaseStudy": "اقرأ دراسة الحالة",
+    "completed": "مكتمل",
     "challenge": "التحدي",
     "solution": "الحل",
     "techStack": "التقنيات المستخدمة",
@@ -98,12 +99,16 @@
   },
   "blogs": {
     "title": "المقالات",
-    "noBlogsFound": "لا توجد مقالات"
+    "noBlogsFound": "لا توجد مقالات",
+    "author": "الكاتب",
+    "shareArticle": "شارك المقال",
+    "relatedArticles": "مقالات ذات صلة"
   },
   "caseStudies": {
     "title": "دراسات الحالة",
     "subtitle": "اكتشف كيف نصنع النمو الرقمي للعلامات التجارية الطموحة.",
-    "readFull": "اقرأ دراسة الحالة كاملة"
+    "readFull": "اقرأ دراسة الحالة كاملة",
+    "noCaseStudiesFound": "لا توجد دراسات حالة بعد."
   },
   "inlineCta": {
     "heading": "هل أنت مستعد لبدء رحلتك الرقمية؟",

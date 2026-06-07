@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { CaseStudiesQueryProvider } from '@/components/providers/case-studies-query-provider'
 import { CaseStudiesClient } from './case-studies-client'
 
 export const metadata: Metadata = {
@@ -17,6 +18,17 @@ export const metadata: Metadata = {
     },
 }
 
-export default function page() {
-    return <CaseStudiesClient />
+export default async function page({
+    params,
+}: {
+    params: Promise<{ locale: string }>
+}) {
+    const { locale } = await params
+    const safeLocale = locale === 'ar' ? 'ar' : 'en'
+
+    return (
+        <CaseStudiesQueryProvider>
+            <CaseStudiesClient locale={safeLocale} />
+        </CaseStudiesQueryProvider>
+    )
 }

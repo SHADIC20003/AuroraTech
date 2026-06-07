@@ -6,7 +6,8 @@ import { notFound } from 'next/navigation'
 import { z } from 'zod'
 import { Clock, Calendar, Link as LinkIcon } from 'lucide-react'
 import Image from 'next/image'
-import { BlogCard } from '@/components/cards/blog-card'
+import { Link } from '@/i18n/navigation'
+import type { Blog } from '@prisma/client'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 3600
@@ -145,8 +146,32 @@ export default async function page({
                     <div className='mt-24 border-t border-slate-200 dark:border-slate-800 pt-16'>
                         <h2 className='text-3xl font-bold text-slate-900 dark:text-white mb-8'>Related Articles</h2>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                            {relatedBlogs.map((relatedBlog) => (
-                                <BlogCard key={relatedBlog.id} blog={relatedBlog} />
+                            {relatedBlogs.map((relatedBlog: Blog) => (
+                                <Link
+                                    key={relatedBlog.id}
+                                    href={`/blog/${relatedBlog.id}`}
+                                    className='group flex flex-col rounded-3xl bg-gradient-to-b from-green-300 to-slate-200 dark:bg-border-gradient p-[0.125rem] shadow-blog-card'
+                                >
+                                    <div className='flex grow flex-col rounded-3xl bg-white dark:bg-white/5 border border-transparent dark:border-white/10'>
+                                        <div className='relative flex overflow-hidden rounded-t-3xl'>
+                                            <Image
+                                                src={relatedBlog.image}
+                                                alt={relatedBlog.title}
+                                                className='w-full shrink-0 grow rounded-t-3xl object-cover transition-transform duration-500 group-hover:scale-105 md:min-h-80'
+                                                width={500}
+                                                height={300}
+                                            />
+                                        </div>
+                                        <div className='flex grow flex-col justify-between gap-y-2 px-5 pb-5 pt-2 text-start'>
+                                            <h3 className='text-balance font-slab text-xl font-bold text-slate-900 dark:text-white md:text-2xl'>
+                                                {relatedBlog.title}
+                                            </h3>
+                                            <p className='line-clamp-4 font-inter text-sm text-slate-600 dark:text-gray-100'>
+                                                {relatedBlog.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>

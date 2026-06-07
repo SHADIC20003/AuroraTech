@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
 import { BlogsQueryProvider } from '@/components/providers/blogs-query-provider'
-import { BlogsListClient } from './blogs-list-client'
+import { BlogDetailClient } from './blog-detail-client'
 
 export const metadata: Metadata = {
-    title: 'Blogs | Aurora Tech',
+    title: 'Blog | Aurora Tech',
     openGraph: {
-        type: 'website',
+        type: 'article',
         url: 'https://auroratech.me/blogs',
-        title: 'Blogs | Aurora Tech',
+        title: 'Blog | Aurora Tech',
         images: [{ url: '/others/favicon.png', width: 512, height: 512, alt: 'Aurora Tech Logo' }],
     },
     twitter: {
-        title: 'Blogs | Aurora Tech',
+        title: 'Blog | Aurora Tech',
         site: 'https://auroratech.me/blogs',
         images: [{ url: '/others/favicon.png', alt: 'Aurora Tech Logo' }],
         card: 'summary_large_image',
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
 export default async function page({
     params,
 }: {
-    params: Promise<{ locale: string }>
+    params: Promise<{ slug: string; locale: string }>
 }) {
-    const { locale } = await params
+    const { slug, locale } = await params
     const safeLocale = locale === 'ar' ? 'ar' : 'en'
 
     return (
         <BlogsQueryProvider>
-            <BlogsListClient locale={safeLocale} />
+            <BlogDetailClient slug={slug} locale={safeLocale} />
         </BlogsQueryProvider>
     )
 }
