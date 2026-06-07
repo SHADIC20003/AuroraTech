@@ -7,7 +7,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const BASE_URL = 'https://auroratech.me'
     const BASE_WITH_WWW = 'https://www.auroratech.me'
 
-    const blogs = await prisma.blog.findMany()
+    let blogs: { id: string }[] = []
+    try {
+        blogs = await prisma.blog.findMany({ select: { id: true } })
+    } catch {
+        // DATABASE_URL not available at build time; blogs hydrate on first runtime request
+    }
 
     return [
         {
